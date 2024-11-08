@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.form-style{
+    /* border: black 1px solid; */
+    width: 40%;
+    height: 50%;
+    padding: 15px;
+}       
+
+.my-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.et-style{
+    margin-bottom: 46px;
+}
+
+.my-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90%;
+}

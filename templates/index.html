@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>FinOps Forecast POC App</title>
+</head>
+
+<body>
+    <div class="my-style">
+     
+            <form class="form-style et-style">
+
+                <div class="form-group">
+                    <label for="app-id">App ID</label>
+                    <input type="text" class="form-control" id="app-id" placeholder="App ID">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Component-id">Component ID</label>
+                    <input type="text" class="form-control" id="Component-id" placeholder="Component ID">
+                </div>
+    
+                <div class="form-group">
+                    <label for="gcp">GCP Project</label>
+                    <input type="text" class="form-control" id="gcp" placeholder="GCP Project">
+                </div>
+    
+                <div class="form-group">
+                    <label for="env">Env</label>
+                    <select class="form-control">
+                        <option>Dev</option>
+                        <option>Prod</option>
+                        <option>QA</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="loc">Location</label>
+                    <input type="text" class="form-control" id="loc" placeholder="Location">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Add</button>
+    
+            </form>
+       
+
+            <form class="form-style">
+                <div class="form-group">
+                    <label for="cost-type">Cost Type</label>
+                    <input type="text" class="form-control" id="cost-type" placeholder="Cost Type">
+                </div>
+
+                <div class="form-group">
+                    <label for="forcast-units">Forecast Units</label>
+                    <select class="form-control">
+                        <option>Compute vCPU</option>
+                        <option>Compute Ram</option>
+                        <option>Compute PD</option>
+                        <option>Compute Backup</option>
+                        <option>Kubernetes / Anthos Cores</option>
+                        <option>Windows Licensing Cores</option>
+    
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sku-info">Sku Info</label>
+                    <input type="text" class="form-control" id="sku-info" placeholder="Sku Info (Standard Pricing Used)">
+                </div>
+    
+                <div class="form-group">
+                    <label for="comments">Comments</label>
+                    <input type="text" class="form-control" id="comments" placeholder="Comments">
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-ramp-units">Units at Full Ramp</label>
+                    <input type="number" class="form-control" id="full-ramp-units" placeholder="Units">
+                </div>
+    
+                <div class="form-group">
+                    <label for="weekly-hours">Weekly Hours used - 168 Max(24*7)</label>
+                    <input type="number" class="form-control" id="weekly-hours" placeholder="Weekly Hours used">
+                </div>
+            </form>
+        
+    </div>
+
+    <div class="my-table">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Component ID</th>
+                <th scope="col">GCP Project</th>
+                <th scope="col">Env</th>
+                <th scope="col">Location</th>
+                <th scope="col">Cost Type</th>
+                <th scope="col">Forecast Unit</th>
+                <th scope="col">Sku Info</th>
+                <th scope="col">Commments</th>
+                <th scope="col">Units at Full Ramp</th>
+                <th scope="col">Weekly Hours Used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1389</th>
+                <td></td>
+                <td></td>
+                <td>dev</td>
+                <td></td>
+                <td>Direct</td>
+                <td>ComputeRAM</td>
+                <td></td>
+                <td>Machine Family</td>
+                <td>0</td>
+                <td>168</td>
+              </tr>
+              <tr>
+                <th scope="row">1269</th>
+                <td></td>
+                <td></td>
+                <td>dev</td>
+                <td></td>
+                <td>Overhead</td>
+                <td>Kubernetes / Anthos Cores</td>
+                <td></td>
+                <td>GKE Overhead / Match Compute Cores</td>
+                <td>0</td>
+                <td>127</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
